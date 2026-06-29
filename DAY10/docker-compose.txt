@@ -71,7 +71,7 @@ docker-compose.yaml
 Host k8smaster
      HostName 13.206.197.7
      user ec2-user
-     IdentityFile ~/Downloads/kkdevopsb9.pem
+     IdentityFile ~/Downloads/Docker key.pem
 
 How to see the version?
 -----------------------
