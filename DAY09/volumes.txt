@@ -102,7 +102,7 @@ NOTE: As of now we are not created the mongo db, so data will not be stored
 step 9: start the mongodb container
 -------
 
-docker run -d --name mongo --network jionetwork -e MONGO_INITDB_ROOT_USERNAME=devdb -e MONGO_INITDB_ROOT_PASSWORD=dev@123 mongo:8.0.9-noble
+docker run -d --name mongo --network jionetwork -e MONGO_INITDB_ROOT_USERNAME=devdb -e MONGO_INITDB_ROOT_PASSWORD=dev@123 mongo:7.0
 
 
 
