@@ -33,36 +33,36 @@ EX:
 ---
 
  version: "3.8"
-     2
-     3  services:
-     4    springapp:
-     5      image: koushik122002/springapp:latest
-     6      ports:
-     7        - "8080:8080"
-     8      depends_on:
-     9        - mongo
-    10      networks:
-    11        - jio
-    12      environment:
-    13        MONGO_DB_HOSTNAME: mongo
-    14        MONGO_DB_USERNAME: devdb
-    15        MONGO_DB_PASSWORD: dev123
-    16
-    17    mongo:
-    18      image: mongo:7.0
-    19      networks:
-    20        - jio
-    21      environment:
-    22        MONGO_INITDB_ROOT_USERNAME: devdb
-    23        MONGO_INITDB_ROOT_PASSWORD: dev123
-    24      volumes:
-    25        - jiovolume:/data/db
-    26
-    27  networks:
-    28    jio:
-    29
-    30  volumes:
-    31    jiovolume:
+
+services:
+  springapp:
+    image: koushik122002/springapp:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    networks:
+      - jio
+    environment:
+      MONGO_DB_HOSTNAME: mongo
+      MONGO_DB_USERNAME: devdb
+      MONGO_DB_PASSWORD: dev123
+
+  mongo:
+    image: mongo:7.0
+    networks:
+      - jio
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: devdb
+      MONGO_INITDB_ROOT_PASSWORD: dev123
+    volumes:
+      - jiovolume:/data/db
+
+networks:
+  jio:
+
+volumes:
+  jiovolume:
   
 
 
