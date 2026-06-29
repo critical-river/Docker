@@ -194,7 +194,7 @@ insert some data
 step 3: Recreate the mongo db container
 -------
 
-docker run -d --name mongo -v /home/ubuntu/spring-boot-mongo-docker-kkfunda/mongo-bkp:/data/db --network jionetwork -e MONGO_INITDB_ROOT_USERNAME=devdb -e MONGO_INITDB_ROOT_PASSWORD=dev@123 mongo
+docker run -d --name mongo -v /root/spring-boot-mongo-docker-kkfunda/backup:/data/db --network jionetwork -e MONGO_INITDB_ROOT_USERNAME=devdb -e MONGO_INITDB_ROOT_PASSWORD=dev@123 mongo:7.0
 
 
 Assignment: run the jenkins as a container and create a job check the volumes concept
